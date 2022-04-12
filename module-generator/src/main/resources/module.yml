@@ -1,0 +1,41 @@
+name: hyperone-electronic
+template: D:\projects\code-generator\template
+target: D:\projects\code-generator\code
+database:
+  properties:
+    driver.class: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hyperone?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+    remarksReporting: "true"
+    user: test
+    password: test
+  javaType:
+    BIGINT: Long
+    BIGINT_UNSIGNED: Long
+    VARCHAR: String
+    INT: Integer
+    DATETIME: Date
+    DOUBLE: BigDecimal
+    DECIMAL: BigDecimal
+    ENUM: String
+    TIMESTAMP: Date
+    TEXT: String
+    CHAR: String
+    TINYINT: Integer
+    BIT: Integer
+    INTEGER: Integer
+  jdbcType:
+    BIGINT: BIGINT
+    VARCHAR: VARCHAR
+    INT: INTEGER
+    DECIMAL: DECIMAL
+    ENUM: CHAR
+    TIMESTAMP: TIMESTAMP
+    DATETIME: TIMESTAMP
+    CHAR: CHAR
+    TINYINT: INTEGER
+    BIT: INTEGER
+    TEXT: LONGVARCHAR
+entities:
+    - table: electronic_message
+      name: ElectronicMessage
+      packageName: electronic
